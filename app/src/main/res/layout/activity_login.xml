@@ -99,11 +99,12 @@
             android:layout_height="wrap_content"
             app:layout_constraintStart_toStartOf="parent" app:layout_constraintEnd_toEndOf="parent"
             android:id="@+id/buttonGoogle"
-            android:drawableStart="@drawable/ic_google_logo" android:background="@color/colorPrimaryTextLight"
+            android:drawableStart="@drawable/ic_google_logo"
             style="@style/Widget.AppCompat.Button.Borderless" android:textColor="@color/colorPrimaryTextDark"
             android:paddingLeft="5dp" app:layout_constraintHorizontal_bias="0.504"
             android:paddingRight="5dp"
-            app:layout_constraintTop_toBottomOf="@+id/buttonFacebook" android:layout_marginTop="8dp"/>
+            app:layout_constraintTop_toBottomOf="@+id/buttonFacebook" android:layout_marginTop="8dp"
+            android:background="#EBEBEB"/>
     <TextView
             android:text="@string/textView_or"
             android:layout_width="wrap_content"
