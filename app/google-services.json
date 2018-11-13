@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "108917511141",
+    "firebase_url": "https://foodever-2feb9.firebaseio.com",
+    "project_id": "foodever-2feb9",
+    "storage_bucket": "foodever-2feb9.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:108917511141:android:d7f117ac0e31c11e",
+        "android_client_info": {
+          "package_name": "com.foodever.foodever"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "108917511141-ug53jcnkjlv4effp7061ggg5sjc85kq8.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.foodever.foodever",
+            "certificate_hash": "7ddd59abbdbd310a43b1bafcc85bfa7f03e12094"
+          }
+        },
+        {
+          "client_id": "108917511141-dmhpjcj5c3kdu2fs9lvkghhb004va5ge.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCNkyFBsn8jsEAnF6SbvZaoou3NO7qScyY"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "108917511141-dmhpjcj5c3kdu2fs9lvkghhb004va5ge.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

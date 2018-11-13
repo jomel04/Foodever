@@ -4,6 +4,7 @@
     <string name="editText_username">Username</string>
     <string name="editText_password">Password</string>
     <string name="button_login">LOGIN</string>
+    <string name="button_logout">LOGOUT</string>
     <string name="button_facebook">LOGIN WITH FACEBOOK</string>
     <string name="button_google">LOGIN WITH GOOGLE</string>
     <string name="textView_createAnAccount">CREATE AN ACCOUNT</string>
