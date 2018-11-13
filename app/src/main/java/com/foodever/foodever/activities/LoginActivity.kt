@@ -1,5 +1,6 @@
 package com.foodever.foodever.activities
 
+import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
@@ -11,6 +12,8 @@ import kotlinx.android.synthetic.main.activity_login.*
 class LoginActivity : AppCompatActivity() {
 
     val tag: String = "LoginActivity"
+    val username = "admin"
+    val password = "admin"
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -19,7 +22,14 @@ class LoginActivity : AppCompatActivity() {
         buttonLogin.setOnClickListener {
             val username: String = editTextUsername.text.toString()
             val password: String = editTextPassword.text.toString()
-            Toasty.info(this, "Username: $username\nPassword: $password", Toast.LENGTH_LONG, true).show()
+            if(username != this@LoginActivity.username || password != this@LoginActivity.password) {
+                Toasty.info(this, "Username/Password is incorrect!", Toast.LENGTH_LONG, true).show()
+                return@setOnClickListener
+            } else {
+                val intent = Intent(this@LoginActivity, MainActivity::class.java)
+                intent.putExtra("username", this@LoginActivity.username)
+                startActivity(intent)
+            }
         }
 
         buttonFacebook.setOnClickListener {
