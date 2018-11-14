@@ -9,4 +9,8 @@
     <string name="button_google">LOGIN WITH GOOGLE</string>
     <string name="textView_createAnAccount">CREATE AN ACCOUNT</string>
     <string name="textView_or">OR</string>
+
+    <!-- Facebook -->
+    <string name="facebook_app_id">2188179887867149</string>
+    <string name="fb_login_protocol_scheme">fb2188179887867149</string>
 </resources>

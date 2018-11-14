@@ -13,9 +13,8 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
-
         user?.let {
+            setContentView(R.layout.activity_main)
             val name: String? = user.displayName
             val email: String? = user.email
             val emailVerified = user.isEmailVerified
@@ -26,6 +25,7 @@ class MainActivity : AppCompatActivity() {
             signOut()
             val intent = Intent(this@MainActivity, LoginActivity::class.java)
             startActivity(intent)
+            finish()
         }
     }
 
