@@ -1,8 +1,11 @@
 <resources>
     <string name="app_name">Foodever</string>
     <string name="app_slogan">Trip to Foodever</string>
+
+    <!--EditText-->
     <string name="editText_username">Username</string>
     <string name="editText_password">Password</string>
+    <!--Button-->
     <string name="button_login">LOGIN</string>
     <string name="button_logout">LOGOUT</string>
     <string name="button_facebook">LOGIN WITH FACEBOOK</string>
@@ -13,4 +16,16 @@
     <!-- Facebook -->
     <string name="facebook_app_id">2188179887867149</string>
     <string name="fb_login_protocol_scheme">fb2188179887867149</string>
+
+    <!--Bottom Navigation-->
+    <string name="title_activity_main">MainActivity</string>
+    <string name="title_home">Home</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="title_map">Map</string>
+    <string name="title_me">Me</string>
+
+    <!--Search by-->
+    <string name="searchby_food">FOOD</string>
+    <string name="searchby_restaurant">RESTAURANT</string>
+    <string name="searchby_place">PLACE</string>
 </resources>
