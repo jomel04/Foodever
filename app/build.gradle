@@ -37,7 +37,7 @@ dependencies {
 
     /* --- LIBRARIES --- */
 
-    // Toast library
+    // Toasty library
     implementation 'com.github.GrenderG:Toasty:1.3.0'
 
     //Kotlin Coroutines
@@ -52,13 +52,17 @@ dependencies {
     /* CircleImage */
     implementation 'de.hdodenhof:circleimageview:2.2.0'
 
+    /*  HTTP */
+    /* OkHTTP */
+    implementation 'com.squareup.okhttp3:okhttp:3.12.0'
+    /* GSON */
+    implementation 'com.google.code.gson:gson:2.8.5'
     /* Picasso */
     implementation 'com.squareup.picasso:picasso:2.71828'
+    /* -----------  */
 
     /* SearchView */
     implementation 'com.github.arimorty:floatingsearchview:2.1.1'
 
-    /* TabStrip */
-    implementation 'com.astuetz:pagerslidingtabstrip:1.0.1'
 }
 apply plugin: 'com.google.gms.google-services'

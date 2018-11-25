@@ -3,6 +3,8 @@ package com.foodever.foodever.activities
 import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import android.support.v4.app.ActivityCompat.startActivityForResult
+import android.support.v4.content.ContextCompat.startActivity
 import android.util.Log
 import android.widget.Toast
 import com.foodever.foodever.R
@@ -34,23 +36,27 @@ class LoginActivity : AppCompatActivity() {
         googleSignInClient = GoogleSignIn.getClient(this, gso)
         auth = FirebaseAuth.getInstance()
 
-        val user = auth.currentUser
-        user?.let {
-            val intent = Intent(this@LoginActivity, MainActivity::class.java)
-            startActivity(intent)
-            finish()
+        btnLogin.setOnClickListener {
+            FirebaseAuth.getInstance()
+                .signInWithEmailAndPassword(etUsername.text.toString(), etPassword.text.toString())
+                .addOnCompleteListener {
+                    if (!it.isSuccessful) return@addOnCompleteListener
+                    val intent = Intent(this@LoginActivity, MainActivity::class.java)
+                    startActivity(intent)
+                    finish()
+                }
+                .addOnFailureListener {
+                    Toasty.error(this, "${it.message}", Toast.LENGTH_LONG).show()
+                }
         }
 
-        buttonLogin.setOnClickListener {
-
-        }
-
-        buttonGoogle.setOnClickListener {
+        btnGoogle.setOnClickListener {
             signIn()
         }
 
-        textViewCreateAccount.setOnClickListener {
-            Toasty.info(this, "Create an account!", Toast.LENGTH_LONG, true).show()
+        tvCreateAccount.setOnClickListener {
+            val intent = Intent(this@LoginActivity, RegisterActivity::class.java)
+            startActivity(intent)
         }
     }
 
@@ -63,12 +69,18 @@ class LoginActivity : AppCompatActivity() {
         super.onStart()
         // Check if user is signed in (non-null) and update UI accordingly.
         val currentUser = auth.currentUser
+        currentUser?.let {
+            val intent = Intent(this@LoginActivity, MainActivity::class.java)
+            startActivity(intent)
+            finish()
+        }
     }
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
         // Result returned from launching the Intent from GoogleSignInApi.getSignInIntent(...);
-        if (requestCode == 123) {            val task = GoogleSignIn.getSignedInAccountFromIntent(data)
+        if (requestCode == 123) {
+            val task = GoogleSignIn.getSignedInAccountFromIntent(data)
             try {
                 // Google Sign In was successful, authenticate with Firebase
                 val account = task.getResult(ApiException::class.java)

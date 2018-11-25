@@ -6,12 +6,26 @@
         <item name="colorPrimaryDark">@color/colorPrimaryTextLight</item>
     </style>
 
+    <!-- InternetConnectivity theme. -->
+    <style name="InternetConnectivityTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/colorPrimaryTextLight</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryTextLight</item>
+    </style>
+
     <!-- Login Theme -->
     <style name="LoginTheme" parent="Theme.AppCompat.Light.NoActionBar">
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimary</item>
         <item name="colorAccent">@color/colorAccent</item>
     </style>
+
+    <!-- Register Theme -->
+    <style name="RegisterTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimary</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
 
     <!-- Main Theme -->
     <style name="MainTheme" parent="Theme.AppCompat.Light.NoActionBar">
