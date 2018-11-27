@@ -21,6 +21,7 @@
     <string name="textView_or">OR</string>
     <string name="button_tryAgain">TRY AGAIN</string>
     <string name="button_register">REGISTER</string>
+    <string name="button_select_photo">SELECT\nPHOTO</string>
 
     <!-- Facebook -->
     <string name="facebook_app_id">2188179887867149</string>

@@ -23,9 +23,15 @@ class UserActivity : AppCompatActivity() {
 
         user?.let {
             val name = user.displayName
+            val email = user.email
             val photoUrl = user.photoUrl
 
-            tvName.text = name
+            name?.let {
+                tvName.text = name
+            }
+            email?.let {
+                tvName.text = email
+            }
             Picasso.get().load(photoUrl).into(ivProfile)
             Log.i("UserActivity", "Photo url: $photoUrl")
         }

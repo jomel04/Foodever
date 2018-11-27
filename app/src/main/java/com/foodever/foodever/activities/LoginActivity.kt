@@ -37,6 +37,10 @@ class LoginActivity : AppCompatActivity() {
         auth = FirebaseAuth.getInstance()
 
         btnLogin.setOnClickListener {
+            if (etUsername.text.isEmpty() || etPassword.text.isEmpty()) {
+                Toasty.info(this, "Please fill out the fields!", Toast.LENGTH_SHORT).show()
+                return@setOnClickListener
+            }
             FirebaseAuth.getInstance()
                 .signInWithEmailAndPassword(etUsername.text.toString(), etPassword.text.toString())
                 .addOnCompleteListener {
